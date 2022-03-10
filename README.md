@@ -1,0 +1,2 @@
+# lock-scroll-page
+ไปเจอ js มาสคริป นึงครับเอามาฝาก  มันจะ lock scroll เมื่อ refresh page ครับให้มันอยู่ตำแหน่งเดิม  &lt;script>         document.addEventListener("DOMContentLoaded", function(event) {              var scrollpos = localStorage.getItem('scrollpos');             if (scrollpos) window.scrollTo(0, scrollpos);         });          window.onbeforeunload = function(e) {             localStorage.setItem('scrollpos', window.scrollY);         };     &lt;/script>
